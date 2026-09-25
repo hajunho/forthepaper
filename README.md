@@ -2,7 +2,7 @@
 
 # For the Paper
 
-**A ruler whose unit is the paper itself, and the verdicts produced by using it.**
+**A ruler whose unit is the work itself — the paper, and now the program — and the verdicts produced by using it.**
 
 [![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 [![Verdicts](https://img.shields.io/badge/verdicts-1-informational.svg)](papers/README.md)
@@ -12,8 +12,8 @@
 
 This repository holds two things, kept apart.
 
-1. **The standard.** [*The Weight of a Paper*](000_tier.md) sets out the **T-Grade**: seven tiers, T7 to T1, for grading a research paper by reading it, independent of where it was published. It was written by Claude, an AI language model, and by its own scale it grades itself T6, an unverified pilot. A Korean edition is at [000_tier.ko.md](000_tier.ko.md).
-2. **The verdicts**, in [`papers/`](papers/README.md), sorted by field. Each applies the standard's judging procedure to one published paper and is published with its complete worksheet so that it can be checked, disputed, and corrected. They are the beginning of the standard's verification, one paper at a time.
+1. **The standard.** [*The Weight of a Paper*](000_tier.md) sets out the **T-Grade**: seven tiers, T7 to T1, for grading a research paper by reading it, independent of where it was published. It was written by Claude, an AI language model, and by its own scale it grades itself T6, an unverified pilot. A Korean edition is at [000_tier.ko.md](000_tier.ko.md). Two companions extend it: [*The Proxy Atlas*](001_proxy_atlas.md), the evidence file behind its critique of venue metrics, and [*The Weight of a Program*](002_program.md), the same standard translated for software artifacts — documentation as the claim, the running bytes as the evidence.
+2. **The verdicts**, in [`papers/`](papers/README.md), sorted by field, and in [`programs/`](programs/README.md), sorted by domain, where each domain opens with its own field notes. Each verdict applies the standard's judging procedure to one published paper or one pinned program release and is published with its complete worksheet so that it can be checked, disputed, and corrected. They are the beginning of the standard's verification, one work at a time.
 
 ---
 
@@ -72,11 +72,16 @@ A grade thrown down without reasons is not a judgment. Every verdict states **th
 |---|---|
 | [000_tier.md](000_tier.md) | *The Weight of a Paper*, the standard. Revised edition, September 2026. English. |
 | [000_tier.ko.md](000_tier.ko.md) | The standard in Korean. |
-| [papers/](papers/README.md) | Verdicts, one folder per field, following the OECD Fields of Research and Development classification. The folder's own README explains the taxonomy and the rules every verdict must meet. |
+| [001_proxy_atlas.md](001_proxy_atlas.md) | *The Proxy Atlas*, a companion to the standard: the five families of venue metrics, their two ruptures on record, and the disciplines for citing venue context in a verdict. English. |
+| [001_proxy_atlas.ko.md](001_proxy_atlas.ko.md) | The atlas in Korean. |
+| [002_program.md](002_program.md) | *The Weight of a Program*: the T-Grade translated for software artifacts, with the defect catalog for the gap between documentation and bytes. English. |
+| [002_program.ko.md](002_program.ko.md) | The program translation in Korean. |
+| [papers/](papers/README.md) | Paper verdicts, one folder per field, following the OECD Fields of Research and Development classification. The folder's own README explains the taxonomy and the rules every verdict must meet. |
+| [programs/](programs/README.md) | Program verdicts, one folder per domain, each domain opening with its normative field notes (`ai-systems/`, `retrieval-systems/` so far). The folder's own README explains the rules. |
 | [README.ko.md](README.ko.md) | This guide in Korean. |
 | [.github/ISSUE_TEMPLATE](.github/ISSUE_TEMPLATE) | Template for author responses and correction requests. |
 
-**Verdicts so far:** 1, in 1 field (`social-sciences/education`). The index is in [papers/README.md](papers/README.md#index).
+**Verdicts so far:** 1 paper verdict, in 1 field (`social-sciences/education`); no program verdicts yet — `programs/` opens with its field notes. The indexes are in [papers/README.md](papers/README.md#index) and [programs/README.md](programs/README.md#index).
 
 ---
 
@@ -113,6 +118,8 @@ The T-Grade has no axis for an author's effort, seniority, or intent. A verdict 
 6. Mark the border if a single judgment decided the grade, and flag it for human re-examination (§4.5).
 7. Record what was verified outside the paper (venue status, identifiers, figures) in the verification log (§4.6).
 8. File it under `papers/<major-field>/<sub-field>/NNN_short_title.md`, with a counterpart in the paper's language where that differs from English, and add a row to the index in `papers/README.md`.
+
+A program verdict follows the same procedure through the translation in [002_program.md](002_program.md): pin the revision by hash, execute and decode the artifact before reading its documentation, run the domain's mandatory steps from its field notes, and file it under `programs/<domain>/NNN_short_title.md` with a row in `programs/README.md`.
 
 ## The AI judge and its limits
 
