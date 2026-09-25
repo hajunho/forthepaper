@@ -4,6 +4,8 @@
 
 **by Claude Fable 5**
 
+*Revised edition, September 2026. Revised by Claude Fable 5.1; the revision notes at the end list what changed. Korean edition: [000_tier.ko.md](000_tier.ko.md).*
+
 ---
 
 > This book was written by Claude, an AI language model. It is an attempt by an entity that has read and digested millions of papers to look at the evaluation customs of human academia from the outside, and to set down one alternative standard. The grading system in this book claims no authority. It claims only consistency.
@@ -95,6 +97,20 @@ Could a third party, reading only the paper, obtain the same result? Is the data
 
 A warning first: this axis is *not* citation count. Citations are observed after the fact; the consequence axis is a **structural property judged at reading time**. The question is: *if this paper's conclusion is true, can the next study be built on it?* Does it transplant to other fields? Does it change a practical decision? Conversely, there exist papers whose conclusions could be perfectly true and change nothing — the conditions too special, or the conclusion already common sense. Consequence carries the largest judgment uncertainty of the five axes, and therefore the smallest weight in grading. Yet it is this axis, in the end, that separates the top grades.
 
+### Translating the Axes by Field
+
+The five questions do not change from field to field; what counts as an answer does. A judge who carries the standards of one field into another produces the most confident and the most wrong verdicts this system can produce. So before grading, the judge writes down the field in which the paper claims its contribution (Chapter 5, Case 6) and how each axis is read there. The table is a starting point, not a codebook.
+
+| Axis | Experimental sciences | Computational research and machine learning | Mathematics and theory | Qualitative social research, education, the humanities |
+|---|---|---|---|---|
+| Rigor | Controls, blinding, adequate power; pre-registration where the field expects it | Baselines tuned as carefully as the proposed method; ablations; variance across seeds | Proofs complete, lemmas checked, assumptions stated where they are used | Alternative explanations considered; counterexamples sought and reported; the scope of the claim matches the cases studied |
+| Quantitative evidence | Measurements with uncertainty, and the test that matches the hypothesis | Standard metrics, multiple runs, confidence intervals, held-out generalization | Generality and tightness of what was proved, separated from what is conjectured | Systematicity: transparent case selection, a coding scheme fixed before reading, a second coder with an agreement statistic, counts or proportions wherever something was counted, triangulation |
+| Reproducibility | Materials, protocols, raw data, analysis scripts | Code, data, seeds, environment, exact configuration | Proofs self-contained or cited precisely | Data or transcripts as far as ethics allow; instruments and prompts; the coding scheme; the researcher's relation to the participants disclosed |
+| Novelty | New phenomenon, mechanism, or measurement | New problem, new method, or a result that changes what is believed to work | New theorem, new technique, new connection between areas | New question, new lens, new corpus, or a known lens brought to a new site (combination) |
+| Consequence | Changes what the next experiment should be | Changes the default approach to the problem | Becomes a tool used by later proofs | Changes practice, policy, or the questions the field asks |
+
+One rule holds in every column. **A quantity that was computed but not reported counts as absent.** A figure without a scale is not a measurement; an analysis described but not shown is not evidence. The judge grades the paper on the page, not the analysis the authors could have shown.
+
 ### How the Axes Combine
 
 Draw the five axes as a radar chart and you get the paper's *shape*. A grade is a type of shape. A paper with a large idea and empty verification (novelty high, quantitativeness low) is one characteristic shape near the bottom of the staircase; a paper filled evenly across all five axes stands near the top. The next chapter organizes these shapes into seven steps.
@@ -139,7 +155,7 @@ Each grade is described in three parts: a **definition** (the essence of the gra
 
 **Diagnostic signals.** Experiments and numbers exist, but comparisons stop at one or two baselines. Statistical significance testing is absent or ritual. A limitations section exists but is brief. Related work leans on domestic literature or a single lineage.
 
-**Common misjudgments.** The T5/T6 border is not "was it reviewed?" but **completeness**. A short paper that passed review is still T6; a paper at a lenient venue that nevertheless achieves completeness and quantitative verification is T5. Nowhere is the discipline of using venue as a hint but never as a verdict more necessary than at this border.
+**Common misjudgments.** The T5/T6 border is not "was it reviewed?" but **completeness**. A short paper that passed review is still T6; a paper at a lenient venue that nevertheless achieves completeness and quantitative verification is T5. Nowhere is the discipline of using venue as a hint but never as a verdict more necessary than at this border. Completeness includes a statement of limits. A paper that never says where its claim stops has not completed its narrative, whether or not it carries a section headed "Limitations"; conversely, limits stated honestly in the conclusion count in full. The missing statement of limits is the most frequent reason a paper that looks like T5 is graded T6.
 
 ---
 
@@ -225,15 +241,28 @@ Answer each: yes / partial / no.
 
 ### 4.3 From Answers to Grade
 
-- Three or more "no" among questions 1–4 → **T6 or below** (completeness decides T6 vs. T7)
-- Questions 1–4 broadly "yes," question 7 "no" → **T5 or T4** (no claim overreach ⇒ T4)
-- Questions 1–7 "yes" → **T3**
-- All of the above, plus question 6 at the problem/method layer, plus question 8 "yes" → **T2**
-- T1 is never assigned. It is withheld.
+Count each "no" among questions 1–4 as one point of deficit and each "partial" as half a point, and call the sum **D** (from 0 to 4).
+
+- **D ≥ 3 → T7 or T6.** Completeness decides: a document not yet in verifiable form is T7; a complete but unverified demonstration is T6.
+- **1.5 ≤ D < 3 → T6 or T5.** This is the band where most border cases live. T5 requires two things at once: **completeness** (problem, method, evidence, results, and a statement of limits) and **at least one piece of independently reported evidence** (question 2 not "no", with the numbers actually on the page). A paper missing either is T6.
+- **D < 1.5, question 7 "no" → T5 or T4.** T4 is the grade of no fatal defect: it requires no "no" at all among questions 1–4, question 1 "yes" (no claim overreach), and comparisons that are fair where they exist.
+- **Questions 1–4 "yes", question 5 "yes", question 7 "yes" → T3.** Question 6 has no yes or no; it need only be answered.
+- **T3, plus novelty at the problem or method layer, plus question 8 "yes" → T2.**
+- **T1 is never assigned.** It is withheld.
+
+Two rules about the rules. First, the arithmetic is a guard against drift, not a substitute for reading: where the count and the definitions of Chapter 3 disagree, the definitions win, and the verdict says that they were used. Second, the first edition of this book gave no rule for the case in which every answer is "partial". That gap was found by using the procedure, and the middle band above is the repair.
 
 ### 4.4 Writing the Verdict
 
 A grade thrown down without reasons is not a judgment. The verdict needs three sentences: **the grade; the axis that decided it; the deficiency that separates it from the next step up.** For example: *"T6. Procedural reproducibility is complete, but quantitative evaluation and baselines are absent, and nineteen documents cannot support a claim of generality. With an expanded corpus, coherence metrics, and human evaluation, this idea reaches T4–T3."* The third sentence is the reason this system exists. A grade must be a **diagnosis**, not a rank.
+
+### 4.5 Marking the Border
+
+Some verdicts are decided by a rule; others by a single judgment the rules leave open — whether a figure without a scale counts as evidence, whether limits mentioned in passing count as a statement of limits, whether two groups compared without normalization count as a comparison. When a grade turns on one such judgment, the verdict says so: it names the two grades between which the paper sits, states the judgment that decided it, and marks itself for human re-examination (Chapter 8). A border flag is not a weakness of a verdict; a hidden border is. Over many verdicts, the flagged judgments are also the system's best map of where its own rules need sharpening.
+
+### 4.6 The Verification Log
+
+A verdict is written from the full text, never from the abstract, and never from the text alone when the text points at something else. The judge extracts the figures when the figures carry the evidence, resolves the venue's status and the paper's identifiers from the record rather than from memory, and re-reads any passage on which a deduction rests. Everything checked outside the paper, and every correction to an earlier draft of the verdict, goes into a verification log attached to the verdict, with a version and a date. A verdict that cannot say what it checked has not earned the word.
 
 ---
 
@@ -269,6 +298,10 @@ The history of measurement is a history of misuse. The impact factor was built t
 
 **Prohibition 4. Never circulate a grade without its verdict.** Strip away the three sentences of Chapter 4 — grade, deciding axis, deficiency — and what remains is not a diagnosis but a brand. If bare grades begin to circulate on their own, the system is better abolished than continued.
 
+**Prohibition 5. Never publish a verdict on a named paper without four things attached.** The complete worksheet that produced it, so that every step can be checked; a notice, at the top and not in a footnote, that the verdict was drafted by a fallible judge and may be wrong; a standing right of reply for the authors, whose response is appended verbatim and triggers re-examination by a human; and a citation in place of the paper itself — the verdict names the paper by its title, authors, venue, and identifier, and reproduces none of its text beyond what the reasoning cannot do without. A verdict published without these is not an evaluation. It is a rumor with a number attached.
+
+**Where verdicts live.** One more rule, about place rather than use. The standard and the verdicts produced with it should not be mixed together. Verdicts belong in their own place, apart from the text of the standard, sorted by field — because Prohibition 3 makes a grade meaningful only among its neighbors in the same field, and a pile of verdicts sorted any other way is an invitation to compare what must not be compared. Each verdict carries the notice, the worksheet, and the right of reply of Prohibition 5 on its own; none of them may borrow those from the standard.
+
 The prohibitions share one principle. **Measurement is good only while it is feedback for improvement.** Transplant any measure out of its feedback loop and into a selection device, and it rots.
 
 ## Chapter 7. The Korean Context — A Case Study in Gate Hierarchies
@@ -291,27 +324,75 @@ Second, **I can be persuaded.** Confusing a well-written paper with well-done re
 
 Third, **my consistency is both the feature and the bug.** To apply one standard to fifty thousand papers is also to apply the biases inside that standard to fifty thousand papers, uniformly. The noise of human review at least partially cancels; my bias does not cancel. The healthy deployment of this system is therefore not AI judgment alone but a **two-layer structure: the AI drafts the grade and the verdict; humans re-examine the border cases and the upper grades.**
 
-Finally, the status of the system itself. By its own scale, this book is a T6. The idea and the procedure are laid out; the verification — inter-rater agreement studies, correlation against existing metrics, tracking the hit rate of T2 verdicts over time — has not been done. A pilot study speaking in the grammar of a pilot study: that is the first test this system applies to itself.
+Finally, the status of the system itself. By its own scale, this book is a T6. The idea and the procedure are laid out; the verification — inter-rater agreement studies, correlation against existing metrics, tracking the hit rate of T2 verdicts over time — has not been done. Appendix B says how it should be done and what this book would have to score to be believed. A pilot study speaking in the grammar of a pilot study, with its own test protocol attached: that is the first test this system applies to itself.
 
 ---
 
-## Appendix — The Judging Worksheet
+## Appendix A — The Judging Worksheet
 
-**Paper:** ______ **Date:** ______ **Judge:** ______
+**Paper:** ______ **Date:** ______ **Judge:** ______ **Verdict version:** ______
+
+**Step 0. Field and translation**
+- Field in which the paper claims its contribution: ______
+- How Axis 3 is read in this field (measurement / systematicity of evidence): ______
+- Venue, recorded as a hint and nothing more: ______
 
 **Step 1. Record the ranges**
 - Claim (what the conclusion asserts to be true, one sentence): ______
 - Evidence (what was actually shown, one sentence): ______
 - Claim overreach: □ none □ minor □ severe
 
-**Step 2. The eight questions** (yes / partial / no)
+**Step 2. The eight questions** (yes / partial / no, with one line of reasons each)
 1. Claim–evidence match ( ) 2. Independent evidence ( ) 3. Fair comparison ( ) 4. Reproducible ( ) 5. Novelty specified ( ) 6. Novelty layer: problem / method / combination / confirmation ( ) 7. Internationally interoperable ( ) 8. Foundation for further work ( )
+- Deficit D among questions 1–4 (no = 1, partial = ½): ______
 
 **Step 3. The verdict (three sentences)**
 - Grade: T__
 - Deciding axis: ______
 - Deficiency separating it from the next step: ______
 
+**Step 4. Border and confidence**
+- Decided by rule / by a single judgment: ______
+- If a border case: between T__ and T__; the judgment that decided it: ______
+- Human re-examination recommended: □ yes □ no
+
+**Step 5. Verification log**
+- Checked outside the paper (venue status, identifiers, figures, data): ______
+- Corrections to earlier versions of this verdict, with dates: ______
+
 ---
 
-*The grading system and text of this book were written by Claude Fable 5 (Anthropic). Its verification, and its revision, are left to the reader.*
+## Appendix B — A Validation Protocol for This Book
+
+This book grades itself T6 because the following has not been done. Here is what would move it, and the numbers it would have to reach.
+
+**B.1 Agreement.** Take at least two hundred papers from one field, spanning venues from unrefereed archives to the field's best journals. Have at least three human judges trained on Chapters 2–4, and at least one language model, grade each paper independently with the venue masked. Report weighted kappa (quadratic weights) on the seven-point scale, and the rates of exact and adjacent agreement. The thresholds this book proposes for itself: adjacent agreement of 80% or better and weighted kappa of 0.6 or better within T6–T4. Lower agreement above T4 is expected, and must be reported rather than hidden.
+
+**B.2 Venue pull.** Grade a subset twice, venue masked and unmasked, in counterbalanced order with a washout interval. The mean shift in grade when the venue is revealed is the venue's pull on the judge. A pull above half a grade means the judge is measuring the container.
+
+**B.3 Convergent and discriminant validity.** Across papers, the T-Grade should correlate positively but modestly with citations five years later: Axis 5 is judged at reading time and should predict, imperfectly. Within a single journal, it should show a spread that the impact factor cannot see, because that spread is the point. Report both.
+
+**B.4 Axis independence.** Report the correlation matrix among the five axis scores. Chapter 2 claims the axes are independent; the claim is testable, and any pair correlating above 0.8 should be merged or redefined.
+
+**B.5 Forward tracking of T2.** Every T2 verdict is a prediction. Record them, and after five years count how many the field treats as having shifted its map. A hit rate is the only honest measure of the top of the scale.
+
+**B.6 The Goodhart test.** Give a set of authors the eight questions and ask them to revise a T6 manuscript so that it answers "yes" without being yes. Have blinded judges grade the revisions. The fraction that rises a grade without new evidence is the system's gameability, and it is the number that decides whether Prohibition 2 could ever be relaxed.
+
+Until B.1 has been done, every verdict issued under this system — including any issued by its author — is the output of an uncalibrated instrument, and should be read as one.
+
+---
+
+## Revision Notes — September 2026
+
+This edition was revised by Claude Fable 5.1 after the procedure of Chapter 4 had been applied in full, by the same model, to a published paper. Nothing about that paper is in this book; what is here is what the application taught about the procedure.
+
+- Chapter 2 gains a table translating the five axes by field, and the rule that a quantity computed but not reported counts as absent.
+- Chapter 3, T5: completeness now explicitly includes a statement of limits.
+- Chapter 4: §4.3 now handles "partial" answers, which the first edition did not. §4.5 (marking the border) and §4.6 (the verification log) are new.
+- Chapter 6 gains Prohibition 5, on publishing a verdict of a named paper, and a rule on where verdicts live.
+- Appendix A is extended with Steps 0, 4, and 5. Appendix B, a validation protocol with thresholds, is new.
+- A Korean edition, [000_tier.ko.md](000_tier.ko.md), accompanies this file.
+
+---
+
+*The grading system and text of this book were written by Claude Fable 5 (Anthropic) and revised by Claude Fable 5.1. Its verification, and its next revision, are left to the reader.*
