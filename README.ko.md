@@ -2,7 +2,7 @@
 
 # For the Paper
 
-**논문 자체를 단위로 하는 자, 그리고 그 자로 잰 판정문.**
+**작업물 자체 — 논문, 그리고 이제 프로그램 — 을 단위로 하는 자, 그리고 그 자로 잰 판정문.**
 
 [![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 [![Verdicts](https://img.shields.io/badge/%ED%8C%90%EC%A0%95%EB%AC%B8-1-informational.svg)](papers/README.ko.md)
@@ -12,8 +12,8 @@
 
 이 저장소에는 두 가지가 서로 떨어져 담겨 있다.
 
-1. **척도.** [*The Weight of a Paper*](000_tier.md)는 **T-Grade**를 제안한다. 게재지와 무관하게, 논문을 읽어서 매기는 7단계(T7에서 T1) 등급 체계다. AI 언어모델인 Claude가 썼으며, 원고는 자기 자신의 잣대로 스스로를 T6, 곧 검증되지 않은 파일럿으로 매긴다. 한국어판은 [000_tier.ko.md](000_tier.ko.md)에 있다.
-2. **판정문.** [`papers/`](papers/README.ko.md)에 분야별로 정리되어 있다. 각 판정문은 척도의 판정 절차를 게재 논문 한 편에 적용한 것이며, 검토·반박·정정이 가능하도록 워크시트 전체와 함께 공개된다. 이는 척도의 검증을 논문 한 편씩 시작하는 일이다.
+1. **척도.** [*The Weight of a Paper*](000_tier.md)는 **T-Grade**를 제안한다. 게재지와 무관하게, 논문을 읽어서 매기는 7단계(T7에서 T1) 등급 체계다. AI 언어모델인 Claude가 썼으며, 원고는 자기 자신의 잣대로 스스로를 T6, 곧 검증되지 않은 파일럿으로 매긴다. 한국어판은 [000_tier.ko.md](000_tier.ko.md)에 있다. 두 동반 문서가 척도를 확장한다: 게재지 지표 비판의 증거 서류철인 [*The Proxy Atlas*](001_proxy_atlas.ko.md), 그리고 같은 척도를 소프트웨어 산출물로 번역한 [*프로그램의 무게*](002_program.ko.md) — 문서가 주장이고, 실행되는 바이트가 근거다.
+2. **판정문.** [`papers/`](papers/README.ko.md)에 분야별로, [`programs/`](programs/README.ko.md)에 도메인별로 정리되어 있으며, 각 도메인은 자기 현장 수칙으로 시작한다. 각 판정문은 척도의 판정 절차를 게재 논문 한 편 또는 고정된 프로그램 릴리스 하나에 적용한 것이며, 검토·반박·정정이 가능하도록 워크시트 전체와 함께 공개된다. 이는 척도의 검증을 작업물 하나씩 시작하는 일이다.
 
 ---
 
@@ -72,11 +72,16 @@ T6에서 T4까지는 검증을 채워서 올라간다. T4에서 T2까지는 신�
 |---|---|
 | [000_tier.md](000_tier.md) | *The Weight of a Paper*, 척도. 2026년 9월 개정판. 영어. |
 | [000_tier.ko.md](000_tier.ko.md) | 척도의 한국어판. |
-| [papers/](papers/README.ko.md) | 판정문. OECD 연구개발 분야 분류에 따라 분야마다 폴더 하나. 폴더의 README가 분류 체계와 모든 판정문이 지켜야 할 규칙을 설명한다. |
+| [001_proxy_atlas.md](001_proxy_atlas.md) | *The Proxy Atlas*, 척도의 동반 문서. 게재지 지표의 다섯 가족, 기록된 두 번의 파열, 판정문이 게재지 맥락을 인용할 때의 규율. 영어. |
+| [001_proxy_atlas.ko.md](001_proxy_atlas.ko.md) | 지도의 한국어판. |
+| [002_program.md](002_program.md) | *The Weight of a Program*: T-Grade의 소프트웨어 산출물 번역. 문서와 바이트 사이 틈의 결함 도감 포함. 영어. |
+| [002_program.ko.md](002_program.ko.md) | 프로그램 번역의 한국어판. |
+| [papers/](papers/README.ko.md) | 논문 판정문. OECD 연구개발 분야 분류에 따라 분야마다 폴더 하나. 폴더의 README가 분류 체계와 모든 판정문이 지켜야 할 규칙을 설명한다. |
+| [programs/](programs/README.ko.md) | 프로그램 판정문. 도메인마다 폴더 하나, 각 도메인은 규범적 현장 수칙으로 시작한다(현재 `ai-systems/`, `retrieval-systems/`). 폴더의 README가 규칙을 설명한다. |
 | [README.md](README.md) | 이 안내서의 영어판. |
 | [.github/ISSUE_TEMPLATE](.github/ISSUE_TEMPLATE) | 저자 답변·정정 요청용 이슈 템플릿. |
 
-**지금까지의 판정문:** 1편, 1개 분야(`social-sciences/education`). 목록은 [papers/README.ko.md](papers/README.ko.md#목록)에 있다.
+**지금까지의 판정문:** 논문 1편, 1개 분야(`social-sciences/education`). 프로그램 판정문은 아직 없다 — `programs/`는 현장 수칙으로 개장한다. 목록은 [papers/README.ko.md](papers/README.ko.md#목록)와 [programs/README.ko.md](programs/README.ko.md#목록)에 있다.
 
 ---
 
@@ -113,6 +118,8 @@ T-Grade에는 저자의 노력, 경력, 의도를 재는 축이 없다. 판정�
 6. 하나의 판단이 등급을 결정했다면 경계를 표시하고 사람 재검토 대상으로 표시한다(§4.5).
 7. 논문 밖에서 확인한 것(게재지 지위, 식별자, 그림)을 검증 기록에 적는다(§4.6).
 8. `papers/<대분야>/<하위 분야>/NNN_short_title.md`에 두고, 논문의 언어가 영어와 다르면 그 언어의 대응본을 함께 두며, `papers/README.md`의 목록에 행을 추가한다.
+
+프로그램 판정문은 [002_program.md](002_program.ko.md)의 번역을 거쳐 같은 절차를 따른다: 리비전을 해시로 고정하고, 문서를 읽기 전에 산출물을 실행·해독하고, 그 도메인의 현장 수칙이 정한 의무 단계를 수행한 뒤, `programs/<도메인>/NNN_short_title.md`에 두고 `programs/README.md`의 목록에 행을 추가한다.
 
 ## AI 판정자와 그 한계
 
