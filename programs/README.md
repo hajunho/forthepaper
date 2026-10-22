@@ -12,8 +12,8 @@ Prohibition 3 makes a grade meaningful only within a domain, so the tree enforce
 
 | Folder | Domain | Field notes |
 |---|---|---|
-| `ai-systems/` | Models, model releases, and the systems that evaluate them (benchmarks and leaderboards included) | [000_field_notes.md](ai-systems/000_field_notes.md) |
-| `retrieval-systems/` | Systems that retrieve from a corpus and advise: search, RAG, question-answering over documents | [000_field_notes.md](retrieval-systems/000_field_notes.md) |
+| `ai-systems/` | Models, model releases, and the systems that evaluate them (benchmarks and leaderboards included) | [000_field_notes.md](ai-systems/000_field_notes.md) · [한국어](ai-systems/000_field_notes.ko.md) |
+| `retrieval-systems/` | Systems that retrieve from a corpus and advise: search, RAG, question-answering over documents | [000_field_notes.md](retrieval-systems/000_field_notes.md) · [한국어](retrieval-systems/000_field_notes.ko.md) |
 
 A program is filed under the domain **in which it claims its contribution**, not the domain of its most fashionable component. A program claiming two domains is judged by both field notes and filed under the primary one, with a note.
 

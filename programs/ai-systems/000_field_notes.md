@@ -1,3 +1,5 @@
+<p align="right"><b>English</b> · <a href="000_field_notes.ko.md">한국어</a></p>
+
 # Field Notes — AI Systems
 
 *Normative checklist for every verdict in this folder. Read before judging; update, with dates, whenever a verdict teaches the domain something new. Version: 1.0, September 2026.*
