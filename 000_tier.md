@@ -4,7 +4,7 @@
 
 **by Claude Fable 5**
 
-*Revised edition, September 2026. Revised by Claude Fable 5.1; the revision notes at the end list what changed. Korean edition: [000_tier.ko.md](000_tier.ko.md).*
+*Revised edition, November 2026. Revised by Claude Fable 5.1 (September 2026) and Claude Fable 5.2 (November 2026); the revision notes at the end list what changed. Korean edition: [000_tier.ko.md](000_tier.ko.md).*
 
 ---
 
@@ -239,6 +239,14 @@ Answer each: yes / partial / no.
 7. Is the verification interoperable with international standards? (the T3 gate)
 8. Can the next study be built on this conclusion? (consequence)
 
+The questions are worded in the vocabulary of empirical work — evidence, comparison, reproduction — and, like the axes (Chapter 2), they are translated before they are answered. The translation matters most where the vocabulary fits worst: in mathematics and theory, where nothing is measured and nothing is run.
+
+- **Question 2** asks there whether every result the paper claims is proved on the page or cited to an exact statement elsewhere, and whether what is proved is kept apart from what is conjectured or expected. A proof announced and then omitted — "routine," "similar," "left to the reader" — is the author's assurance, not evidence, and a claimed result that rests on one is answered "partial." This is the rule of Chapter 2 in another material: a proof carried out but not reported counts as absent.
+- **Question 3** asks whether the paper states, accurately, how its results stand to the strongest ones already known: which they contain, which they extend, which they only recover. A theorem has no baseline to tune, but it has predecessors, and a predecessor left unnamed does the work of a baseline left untuned.
+- **Question 7** asks whether the proofs are written to the standard at which a referee anywhere in the field could check them as they stand: complete, in the field's common language, placed against its international literature. Whether a referee has in fact done so is a venue hint, not an answer.
+
+The judge writes this translation down in Step 0, before answering. Left unwritten, question 3 goes vacuous for a paper with no experiments, and two judges who read it differently end a grade apart without knowing why.
+
 ### 4.3 From Answers to Grade
 
 Count each "no" among questions 1–4 as one point of deficit and each "partial" as half a point, and call the sum **D** (from 0 to 4).
@@ -268,7 +276,7 @@ A verdict is written from the full text, never from the abstract, and never from
 
 ## Chapter 5. Border Cases — Where the System Is Tested
 
-The quality of a grading system shows not in its typical cases but at its borders. Six that recur:
+The quality of a grading system shows not in its typical cases but at its borders. Eight that recur:
 
 **Case 1: A brilliant idea, unverified.** Novelty at the problem layer; experiments at demonstration scale. Verdict: T6 — with the layer of the novelty stated explicitly in the verdict. The T-Grade measures the paper as it stands, not the idea's future; the verdict sentence exists to carry the information the grade cannot.
 
@@ -281,6 +289,10 @@ The quality of a grading system shows not in its typical cases but at its border
 **Case 5: The survey.** No new results — what is there to measure? Translate the novelty axis into *novelty of organization*: a new taxonomy, a lineage made visible for the first time. A survey that lists the literature is T5; a survey that redraws the map of a field is T3 to T2.
 
 **Case 6: The interdisciplinary paper.** T3 by field A's standard, T5 by field B's. Verdict: apply the standard of the field in which the paper claims its contribution. If it claims both, it must pass both. "Interdisciplinary" must never become a license to be graded by whichever field is more lenient.
+
+**Case 7: The thesis.** A long document examined by a committee and never sent to a journal: chapters of exposition, a handful of new results, sometimes the only public record of them. Verdict: apply the identical procedure to the results the thesis claims as its own. Length is not an axis, and neither is the name on the degree; the exposition earns nothing and costs nothing. An examination is a hint of the same kind as a venue — it says that a gate was passed, not what passed it. A paper later drawn from the thesis is a different document and gets its own verdict. And because a thesis is usually its author's first sustained work, this is the case in which a grade is most readily mistaken for a measure of a person. Prohibition 1 applies here at full strength.
+
+**Case 8: The technical report of a release.** A model or a system is published together with a report on it: architecture, training, a table of scores. The report is half of a release ([002_program.md](002_program.md)), and its claims are claims about bytes that can be run. Verdict: decide first which object is being judged. A judge who has executed the artifact writes a program verdict. A judge who has only read the report writes a paper verdict and records, in Step 4, that the artifact was not run. Either way, scores for competing systems copied from their own reports or from a leaderboard are hearsay, not a comparison the authors ran, and question 3 is answered accordingly. Scale — parameters, tokens, accelerators — is not an axis: the report of a very large system that never says where its claims stop meets the completeness rule of T5 like any other paper.
 
 ---
 
@@ -335,6 +347,7 @@ Finally, the status of the system itself. By its own scale, this book is a T6. T
 **Step 0. Field and translation**
 - Field in which the paper claims its contribution: ______
 - How Axis 3 is read in this field (measurement / systematicity of evidence): ______
+- How questions 2, 3, and 7 are read in this field, where the wording of §4.2 does not fit as it stands: ______
 - Venue, recorded as a hint and nothing more: ______
 
 **Step 1. Record the ranges**
@@ -393,6 +406,14 @@ This edition was revised by Claude Fable 5.1 after the procedure of Chapter 4 ha
 - Appendix A is extended with Steps 0, 4, and 5. Appendix B, a validation protocol with thresholds, is new.
 - A Korean edition, [000_tier.ko.md](000_tier.ko.md), accompanies this file.
 
+## Revision Notes — November 2026
+
+Revised by Claude Fable 5.2 after the procedure had been applied, in draft, to a doctoral thesis in pure mathematics and to technical reports published with model releases. As before, nothing about those documents is in this book; what is here is what the application taught about the procedure.
+
+- Chapter 4, §4.2: questions 2, 3, and 7 are now translated for proof-based fields. As worded, question 3 was vacuous for a paper with no experiments, and two defensible readings of it put the same thesis a grade apart.
+- Chapter 5 gains Case 7 (the thesis) and Case 8 (the technical report of a release).
+- Appendix A, Step 0, now records how questions 2, 3, and 7 are read in the field.
+
 ---
 
-*The grading system and text of this book were written by Claude Fable 5 (Anthropic) and revised by Claude Fable 5.1. Its verification, and its next revision, are left to the reader.*
+*The grading system and text of this book were written by Claude Fable 5 (Anthropic) and revised by Claude Fable 5.1 and Claude Fable 5.2. Its verification, and its next revision, are left to the reader.*
