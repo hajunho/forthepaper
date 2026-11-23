@@ -56,6 +56,8 @@ Answered yes / partial / no, after reading the paper backwards: conclusion first
 7. Is the verification interoperable with international standards?
 8. Can the next study be built on this conclusion?
 
+The questions are worded for empirical work. §4.2 of the standard translates questions 2, 3, and 7 for mathematics and theory, and the judge writes the translation down before answering.
+
 ### From answers to grade
 
 Each "no" among questions 1–4 counts one point of deficit and each "partial" half a point. A deficit of 3 or more means T7 or T6. Between 1.5 and 3 means T6 or T5, and T5 requires both a statement of limits and at least one independently reported quantity. Below 1.5 with question 7 "no" means T5 or T4, and T4 requires no "no" at all and no claim overreach. Questions 1–5 and 7 "yes" means T3. T3 plus problem- or method-layer novelty plus question 8 "yes" means T2. T1 is never assigned; it is withheld and left to time. Where the count and the tier definitions disagree, the definitions win and the verdict says so.
@@ -70,7 +72,7 @@ A grade thrown down without reasons is not a judgment. Every verdict states **th
 
 | Path | What it is |
 |---|---|
-| [000_tier.md](000_tier.md) | *The Weight of a Paper*, the standard. Revised edition, September 2026. English. |
+| [000_tier.md](000_tier.md) | *The Weight of a Paper*, the standard. Revised edition, November 2026. English. |
 | [000_tier.ko.md](000_tier.ko.md) | The standard in Korean. |
 | [001_proxy_atlas.md](001_proxy_atlas.md) | *The Proxy Atlas*, a companion to the standard: the five families of venue metrics, their two ruptures on record, and the disciplines for citing venue context in a verdict. English. |
 | [001_proxy_atlas.ko.md](001_proxy_atlas.ko.md) | The atlas in Korean. |
@@ -110,7 +112,7 @@ The T-Grade has no axis for an author's effort, seniority, or intent. A verdict 
 
 ## How a verdict is produced
 
-1. Write down the field in which the paper claims its contribution and how Axis 3 is read there (Step 0). Record the venue as a hint and nothing more.
+1. Write down the field in which the paper claims its contribution, how Axis 3 is read there, and, where the eight questions do not fit the field as worded, how questions 2, 3, and 7 are read (Step 0). Record the venue as a hint and nothing more.
 2. Read backwards (§4.1): conclusion and abstract, then evidence, then method, then introduction. Write the one-sentence claim and the one-sentence evidence before reading the introduction.
 3. Answer the eight questions with yes / partial / no and one line of reasons each (§4.2), and compute the deficit.
 4. Map answers to a grade (§4.3). Where the rules and the tier definitions disagree, the definitions win, and the verdict says so.
@@ -133,6 +135,6 @@ The standard itself has not been validated: no inter-rater agreement study, no c
 
 ## Authorship and license
 
-The standard was written by Claude Fable 5 (Anthropic) and revised by Claude Fable 5.1. Verdicts are drafted by Claude Fable 5.1 and identify their judge, version, and date. The repository is maintained by [hajunho](https://github.com/hajunho), who is responsible for human re-examination and for answering issues.
+The standard was written by Claude Fable 5 (Anthropic) and revised by Claude Fable 5.1 and Claude Fable 5.2. Verdicts are drafted by Claude Fable 5.1 and identify their judge, version, and date. The repository is maintained by [hajunho](https://github.com/hajunho), who is responsible for human re-examination and for answering issues.
 
 Licensed under the [GNU General Public License v3.0](LICENSE).
